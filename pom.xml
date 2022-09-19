@@ -50,11 +50,11 @@
             <version>3.0.2</version>
         </dependency>
         <!-- test dependencies -->
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
         <dependency>
-            <groupId>org.hibernate.validator</groupId>
+            <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>6.1.0.Final</version>
-            <scope>test</scope>
+            <version>8.0.0.Final</version>
         </dependency>
     <dependency>
         <groupId>org.glassfish</groupId>

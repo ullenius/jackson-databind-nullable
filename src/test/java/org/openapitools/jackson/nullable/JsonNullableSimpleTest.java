@@ -137,7 +137,7 @@ public final class JsonNullableSimpleTest {
 
     @Test
     public void deserializeNonStringMembers() throws IOException {
-        testReadPetAge(JsonNullable.of(Integer.valueOf(15)), "{\"age\":\"15\"}");
+        testReadPetAge(JsonNullable.of(15), "{\"age\":\"15\"}");
         testReadPetAge(JsonNullable.<Integer>of(null), "{\"age\":null}");
         testReadPetAge(JsonNullable.<Integer>undefined(), "{\"age\":\"\"}");
         testReadPetAge(JsonNullable.<Integer>undefined(), "{\"age\":\"   \"}");

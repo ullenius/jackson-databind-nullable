@@ -115,7 +115,7 @@ public class TestJsonNullableWithPolymorphic extends ModuleTestBase
         assertNotNull(result.value);
         Object ob = result.value.get();
         assertEquals(Integer.class, ob.getClass());
-        assertEquals(Integer.valueOf(5), ob);
+        assertEquals(5, ob);
     }
 
     private void _test(ObjectMapper m, Map<String, ?> map) throws Exception {

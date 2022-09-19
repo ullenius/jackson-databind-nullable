@@ -1,6 +1,7 @@
 package org.openapitools.jackson.nullable;
 
 import jakarta.validation.*;
+import org.hibernate.validator.HibernateValidator;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,8 +19,14 @@ public class JsonNullableValueExtractorTest {
 
     @Before
     public void setUp() {
-        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-        validator = factory.getValidator();
+        try (
+            ValidatorFactory factory = Validation.byProvider(HibernateValidator.class)
+                    .configure()
+                    .addValueExtractor(new JsonNullableValueExtractor())
+                    .buildValidatorFactory();
+        ) {
+            validator = factory.getValidator();
+        }
     }
 
 

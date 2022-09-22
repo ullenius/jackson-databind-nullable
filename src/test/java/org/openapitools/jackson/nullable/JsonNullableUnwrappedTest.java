@@ -68,7 +68,7 @@ public class JsonNullableUnwrappedTest extends ModuleTestBase
     public void testPropogatePrefixToSchema() throws Exception {
         final ObjectMapper mapper = mapperWithModule();
 
-        final AtomicReference<String> propertyName = new AtomicReference<String>();
+        final AtomicReference<String> propertyName = new AtomicReference<>();
         mapper.acceptJsonFormatVisitor(JsonNullableParent.class, new JsonFormatVisitorWrapper.Base(new DefaultSerializerProvider.Impl()) {
             @Override
             public JsonObjectFormatVisitor expectObjectFormat(JavaType type) {

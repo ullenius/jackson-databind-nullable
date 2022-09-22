@@ -105,8 +105,6 @@ public class JsonNullable<T> implements Serializable {
     @Override
     public int hashCode() {
         int result = 31 + (value == null ? 0 : value.hashCode());
-        Boolean bool1 = Boolean.TRUE;
-        bool1.hashCode();
         result = 31 * result + (isPresent ? 1231 : 1237);
         return result;
     }

@@ -260,7 +260,7 @@ public class JsonNullableTest extends ModuleTestBase
     // [modules-java8#33]: Verify against regression...
     public void testOtherRefSerializers() throws Exception
     {
-        String json = MAPPER.writeValueAsString(new AtomicReference<String>("foo"));
+        String json = MAPPER.writeValueAsString(new AtomicReference<>("foo"));
         assertEquals(quote("foo"), json);
     }
 

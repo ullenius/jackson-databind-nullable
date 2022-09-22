@@ -71,8 +71,8 @@ public class TestJsonNullableWithPolymorphic extends ModuleTestBase
 
     public void testJsonNullableMapsFoo() throws Exception {
 
-        Map<String, Object> foo = new LinkedHashMap<String, Object>();
-        Map<String, Object> loop = new LinkedHashMap<String, Object>();
+        Map<String, Object> foo = new LinkedHashMap<>();
+        Map<String, Object> loop = new LinkedHashMap<>();
         loop.put("type", "Foo");
         loop.put("foo", 42);
 
@@ -84,8 +84,8 @@ public class TestJsonNullableWithPolymorphic extends ModuleTestBase
 
     public void testJsonNullableMapsBar() throws Exception {
 
-        Map<String, Object> bar = new LinkedHashMap<String, Object>();
-        Map<String, Object> loop = new LinkedHashMap<String, Object>();
+        Map<String, Object> bar = new LinkedHashMap<>();
+        Map<String, Object> loop = new LinkedHashMap<>();
         loop.put("type", "Bar");
         loop.put("bar", true);
 
@@ -96,8 +96,8 @@ public class TestJsonNullableWithPolymorphic extends ModuleTestBase
     }
 
     public void testJsonNullableMapsBaz() throws Exception {
-        Map<String, Object> baz = new LinkedHashMap<String, Object>();
-        Map<String, Object> loop = new LinkedHashMap<String, Object>();
+        Map<String, Object> baz = new LinkedHashMap<>();
+        Map<String, Object> loop = new LinkedHashMap<>();
         loop.put("type", "Baz");
         loop.put("baz", "hello world!");
 

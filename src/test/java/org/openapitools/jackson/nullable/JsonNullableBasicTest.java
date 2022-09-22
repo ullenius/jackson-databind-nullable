@@ -133,7 +133,7 @@ public class JsonNullableBasicTest extends ModuleTestBase {
     }
 
     public void testSerGeneric() throws Exception {
-        JsonNullableGenericData<String> data = new JsonNullableGenericData<String>();
+        JsonNullableGenericData<String> data = new JsonNullableGenericData<>();
         data.myData = JsonNullable.of("simpleString");
         String value = MAPPER.writeValueAsString(JsonNullable.of(data));
         assertEquals("{\"myData\":\"simpleString\"}", value);

@@ -23,7 +23,7 @@ public class JsonNullableValueExtractorTest {
             ValidatorFactory factory = Validation.byProvider(HibernateValidator.class)
                     .configure()
                     .addValueExtractor(new JsonNullableValueExtractor())
-                    .buildValidatorFactory();
+                    .buildValidatorFactory()
         ) {
             validator = factory.getValidator();
         }

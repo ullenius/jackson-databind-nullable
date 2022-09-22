@@ -58,7 +58,7 @@ public class JsonNullableBasicTest extends ModuleTestBase {
 
     private final ObjectMapper MAPPER = mapperWithModule();
 
-    public void testJsonNullableTypeResolution() throws Exception {
+    public void testJsonNullableTypeResolution() {
         // With 2.6, we need to recognize it as ReferenceType
         JavaType t = MAPPER.constructType(JsonNullable.class);
         assertNotNull(t);
@@ -203,7 +203,10 @@ public class JsonNullableBasicTest extends ModuleTestBase {
         final ObjectMapper objectMapper = mapperWithModule();
         // ENABLE TYPING
         objectMapper
-                .enableDefaultTyping(ObjectMapper.DefaultTyping.OBJECT_AND_NON_CONCRETE);
+                .activateDefaultTyping(
+                        mapperWithModule().getPolymorphicTypeValidator(),
+                        ObjectMapper.DefaultTyping.OBJECT_AND_NON_CONCRETE
+                );
 
         final JsonNullableData myData = new JsonNullableData();
         myData.myString = JsonNullable.of("abc");
